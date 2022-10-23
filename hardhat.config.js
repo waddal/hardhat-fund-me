@@ -1,5 +1,5 @@
 require("@nomicfoundation/hardhat-toolbox")
-import "dotenv/config"
+require("dotenv").config()
 
 const ALCHEMY_API_KEY =
     process.env.ALCHEMY_API_KEY || "https://eth-goerli/example"
