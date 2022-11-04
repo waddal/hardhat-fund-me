@@ -1,5 +1,6 @@
 require("@nomicfoundation/hardhat-toolbox")
 require("dotenv").config()
+require("hardhat-deploy")
 
 const ALCHEMY_API_KEY =
     process.env.ALCHEMY_API_KEY || "https://eth-goerli/example"
@@ -31,4 +32,9 @@ module.exports = {
         currency: "USD",
         coinmarketcap: COINMARKETCAP_API_KEY,
     },
+    namedAccounts: {
+      deployer: {
+        default: 0,
+      }
+    }
 }
